@@ -1,25 +1,69 @@
 {
   "name": "grace-design",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "pnpm run lint:script",
-    "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
-    "postinstall": "husky install",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "format": "prettier --write"
-  },
+  "version": "0.0.1",
+  "description": "grace-design with react",
   "keywords": [],
+  "license": "MIT",
   "author": "Grace",
-  "license": "ISC",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "father build",
+    "build:watch": "father dev",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "dev": "dumi dev",
+    "docs:build": "dumi build",
+    "doctor": "father doctor",
+    "format": "prettier --write",
+    "postinstall": "husky install",
+    "lint": "pnpm run lint:script",
+    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
+    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+    "lint:es/css": "npm run lint:es && npm run lint:css",
+    "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
+    "prepare": "husky install && dumi setup",
+    "prepublishOnly": "father doctor && npm run build",
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "jest": "^29.5.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@umijs/lint": "^4.0.68",
     "commitlint": "^17.6.3",
     "conventional-changelog-cli": "^2.2.2",
+    "dumi": "^2.1.22",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard-with-typescript": "^34.0.1",
@@ -28,9 +72,25 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.32.2",
+    "father": "^4.1.9",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "stylelint": "^15.6.1",
     "typescript": "*"
-  }
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "Grace"
+  ]
 }

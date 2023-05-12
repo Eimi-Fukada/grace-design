@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "@/*": [
+        "packages/*"
+      ],
+      "grace-design": ["packages"],
+      "grace-design/*": ["packages/*", "*"]
+    }
+  },
+  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*","packages/**/*.tsx","packages/**/*.ts","packages/**/*.d.ts"]
+}
