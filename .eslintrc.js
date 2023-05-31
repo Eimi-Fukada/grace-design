@@ -9,7 +9,26 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended',
   ],
-  overrides: [],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
+        'no-unused-expressions': 'off',
+        '@typescript-eslint/no-unused-expressions': 2,
+        '@typescript-eslint/consistent-type-imports': [
+          2,
+          { disallowTypeAnnotations: false },
+        ],
+      },
+    },
+    {
+      extends: [
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+      ],
+      files: ['./**/*.{ts,tsx}'],
+    },
+  ],
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',

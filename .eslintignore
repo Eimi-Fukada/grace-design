@@ -1,10 +1,8 @@
 node_modules/*
-packages/**/node_modules/*
-packages/**/dist/*
-packages/**/build/*
-packages/**/lib/*
-packages/**/src/*.d.ts
+src/**/node_modules/*
+src/**/dist/*
+src/**/build/*
+src/**/lib/*
 
-packages/**/__tests__/*
 **.json
 **.svg
