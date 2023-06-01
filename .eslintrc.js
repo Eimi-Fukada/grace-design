@@ -1,4 +1,5 @@
 module.exports = {
+  ignorePatterns: ['/*', '!/src', '/src/**/*.js'],
   env: {
     browser: true,
     es2021: true,
@@ -36,7 +37,11 @@ module.exports = {
     project: 'tsconfig.json',
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
-  rules: { 'prettier/prettier': 'error' },
+  rules: {
+    'prettier/prettier': 'error',
+    '@typescript-eslint/consistent-type-definitions': 'off',
+    '@typescript-eslint/no-invalid-void-type': 'off',
+  },
   settings: {
     react: { version: '^18.2.0' },
   },

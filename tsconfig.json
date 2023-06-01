@@ -8,8 +8,9 @@
     "allowJs": true,
     "declaration": true,
     "esModuleInterop": true,
+    "importHelpers": true,
     "baseUrl": "./",
-    "typeRoots": ["./src/typings", "./node_modules/@types"],
+    "typeRoots": ["./typings", "./node_modules/@types"],
     "lib": ["ES2016", "DOM"],
     "paths": {
       "grace-design": ["src/index.ts"],
@@ -24,7 +25,7 @@
     "noImplicitAny": true,
     "resolveJsonModule": true
   },
-  "include": [".dumi/**/*", ".dumirc.ts","src"],
+  "include": [".dumi/**/*", ".dumirc.ts","src","docs"],
   "exclude": ["node_modules", "lib", "es", "dist", ".dumi"],
   "ts-node": {
     "compilerOptions": {
