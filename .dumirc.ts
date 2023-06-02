@@ -1,5 +1,5 @@
 import { defineConfig } from 'dumi'
-import { navs } from './config/nav'
+import { navs } from './docs/guide/nav'
 
 export default defineConfig({
   title: 'Grace Design',
@@ -12,6 +12,7 @@ export default defineConfig({
     logo: '/componentlogo.svg',
     nav: navs,
     footer: 'Copyright © 2023-present Grace',
+    socialLinks: { github: 'https://github.com/' },
     // 配置高清方案，默认为 750 高清方案
     hd: {
       rules: [],
