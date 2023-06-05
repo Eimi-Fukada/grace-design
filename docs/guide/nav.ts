@@ -1,7 +1,9 @@
+import { components } from './components'
+
 export const navs = [
   {
     title: '组件',
-    link: '/components',
+    link: '/components/button',
   },
   {
     title: '贡献者',
@@ -12,3 +14,12 @@ export const navs = [
     link: 'https://github.com/',
   },
 ]
+
+export const sidebar = {
+  '/components': [
+    {
+      title: '通用',
+      children: components.common,
+    },
+  ],
+}

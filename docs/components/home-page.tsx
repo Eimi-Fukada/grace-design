@@ -40,7 +40,7 @@ export default () => {
       <div className="features">
         {features.map((i) => {
           return (
-            <div className="item">
+            <div className="item" key={i.title}>
               <div className="featureitem">
                 <div className="emoji">{i.emoji}</div>
                 <div className="featureitem-title">{i.title}</div>

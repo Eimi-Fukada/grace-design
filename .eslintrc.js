@@ -41,6 +41,7 @@ module.exports = {
     'prettier/prettier': 'error',
     '@typescript-eslint/consistent-type-definitions': 'off',
     '@typescript-eslint/no-invalid-void-type': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
   },
   settings: {
     react: { version: '^18.2.0' },

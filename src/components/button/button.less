@@ -1,0 +1,31 @@
+@class-prefix-button: ~'gd-button';
+
+.@{class-prefix-button} {
+  --color: var(--gd-color-text-light-solid);
+
+  --text-color: var(--gd-button-text-color, var(--gd-color-text));
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: auto;
+  padding: 7px 12px;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+    &:active::before {
+      display: none;
+    }
+  }
+}

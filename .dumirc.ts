@@ -1,5 +1,5 @@
 import { defineConfig } from 'dumi'
-import { navs } from './docs/guide/nav'
+import { navs, sidebar } from './docs/guide/nav'
 
 export default defineConfig({
   title: 'Grace Design',
@@ -7,10 +7,15 @@ export default defineConfig({
   outputPath: 'docs-dist',
   cssMinifier: 'esbuild',
   hash: true,
+  resolve: {
+    docDirs: ['docs'],
+    atomDirs: [{ type: 'component', dir: 'src/components' }],
+  },
   themeConfig: {
     name: 'Grace Design',
     logo: '/componentlogo.svg',
     nav: navs,
+    sidebar: sidebar,
     footer: 'Copyright © 2023-present Grace',
     socialLinks: { github: 'https://github.com/' },
     // 配置高清方案，默认为 750 高清方案
