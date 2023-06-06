@@ -42,6 +42,8 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': 'off',
     '@typescript-eslint/no-invalid-void-type': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/strict-boolean-expressions': 'off',
+    'react/display-name': 'off',
   },
   settings: {
     react: { version: '^18.2.0' },

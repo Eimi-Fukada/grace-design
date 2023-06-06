@@ -11,6 +11,10 @@ export default defineConfig({
     docDirs: ['docs'],
     atomDirs: [{ type: 'component', dir: 'src/components' }],
   },
+  alias: {
+    'grace-design/es': process.cwd() + '/src',
+    demos: process.cwd() + '/src/demos/index.ts',
+  },
   themeConfig: {
     name: 'Grace Design',
     logo: '/componentlogo.svg',
