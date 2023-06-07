@@ -17,7 +17,7 @@ export default () => {
     {
       title: '技术栈',
       emoji: '🌈',
-      description: 'react、jest、typescript、vite',
+      description: 'react、jest、typescript、dumi',
     },
   ]
 
@@ -28,8 +28,12 @@ export default () => {
           <div className="title">Grace design</div>
           <div className="description">探索移动端 Web 的体验极限</div>
           <div className="buttonbox">
-            <button className="btn">开始使用</button>
-            <button className="btn">在线体验</button>
+            <a className="btn" href="/components/button">
+              开始使用
+            </a>
+            <a className="btn" href="/components/button">
+              在线体验
+            </a>
           </div>
         </div>
         <div className="rightbox">

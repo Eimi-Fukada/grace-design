@@ -17,7 +17,6 @@
       "grace-design/src/*": ["src/*"],
       "grace-design/es/*": ["src/*"],
       "demos": ["src/demos/index.ts"],
-      "testing": ["src/tests/testing"]
     },
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,

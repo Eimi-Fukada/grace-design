@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div>
+  <button
+    class="gd-button gd-button-primary"
+    type="button"
+  >
+    主要按钮
+  </button>
+</div>
+`;
