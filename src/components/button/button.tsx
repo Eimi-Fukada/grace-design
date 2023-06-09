@@ -1,5 +1,6 @@
 import classNames from 'classnames'
 import React, { type FC } from 'react'
+import { withNativeProps } from '../../../src/utils/native-props'
 import type { ComponentProps } from '../../global/common-style'
 
 const classPrefix = `gd-button`
@@ -59,7 +60,8 @@ export const Button: FC<ButtonProps> = (props) => {
 
   const disabled = props.disabled ?? props.loading
 
-  return (
+  return withNativeProps(
+    props,
     <button
       style={props.style}
       type={type}

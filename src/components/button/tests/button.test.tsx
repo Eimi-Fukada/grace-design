@@ -14,10 +14,10 @@ test('should match snapshot', () => {
 test('should children correctly', () => {
   const { getByText, getByTestId } = render(
     <Button
-      data-testid="button"
       className="aa"
       style={{ margin: 8 }}
       color="primary"
+      data-testid="button"
     >
       主要按钮
     </Button>
