@@ -24,7 +24,10 @@ export default defineConfig({
     socialLinks: { github: 'https://github.com/' },
     // 配置高清方案，默认为 750 高清方案
     hd: {
-      rules: [],
+      rules: [
+        { maxWidth: 375, mode: 'vw', options: [100, 750] },
+        { minWidth: 376, maxWidth: 750, mode: 'vw', options: [100, 1500] },
+      ],
     },
     // 配置 demo 预览器的设备宽度，默认为 375px
     deviceWidth: 375,

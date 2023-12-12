@@ -18,8 +18,12 @@ export const navs = [
 export const sidebar = {
   '/components': [
     {
-      title: '通用',
+      title: '基础组件',
       children: components.common,
+    },
+    {
+      title: '视图组件',
+      children: components.view,
     },
   ],
 }

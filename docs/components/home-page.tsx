@@ -21,6 +21,8 @@ export default () => {
     },
   ]
 
+  const isMobile = window.screen.width <= 600
+
   return (
     <div className="homepage">
       <div className="content">

@@ -37,7 +37,7 @@
     "doctor": "father doctor",
     "format": "prettier --write",
     "postinstall": "husky install",
-    "lint": "pnpm run lint:script",
+    "lint": "npm run lint:script",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "lint:es/css": "npm run lint:es && npm run lint:css",
