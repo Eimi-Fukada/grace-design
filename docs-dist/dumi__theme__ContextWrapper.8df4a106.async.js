@@ -6,7 +6,7 @@
       e.r(o),
         e.d(o, {
           default: function () {
-            return g
+            return E
           },
         })
       var l = e(5574),
@@ -17,8 +17,8 @@
         s = e(92205),
         u = e(90482),
         m = e(85893),
-        E = {}
-      function g() {
+        g = {}
+      function E() {
         var h = (0, n.pC)(),
           p = (0, t.useState)(!0),
           i = c()(p, 2),
@@ -45,7 +45,7 @@
                 authors: ['Grace'],
               },
               historyType: 'browser',
-              entryExports: E,
+              entryExports: g,
               demos: s.DE,
               components: s.wx,
               locales: u.k,
@@ -56,7 +56,7 @@
                 footer: 'Copyright \xA9 2023-present Grace',
                 prefersColor: { default: 'light', switch: !0 },
                 name: 'Grace Design',
-                logo: '/componentlogo.svg',
+                logo: '/grace-design/componentlogo.svg',
                 nav: [
                   { title: '\u7EC4\u4EF6', link: '/components/button' },
                   { title: '\u8D21\u732E\u8005', link: '/resources' },
