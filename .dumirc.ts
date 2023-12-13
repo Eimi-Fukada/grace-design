@@ -2,8 +2,8 @@ import { defineConfig } from 'dumi'
 import { navs, sidebar } from './docs/guide/nav'
 
 export default defineConfig({
-  base: 'grace-design/',
-  publicPath: 'grace-design/',
+  base: '/grace-design',
+  publicPath: '/grace-design/',
   title: 'Grace Design',
   favicons: ['/componentlogo.svg', '/favicon.png'],
   outputPath: 'docs-dist',
