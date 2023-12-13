@@ -19,7 +19,7 @@ export default defineConfig({
   },
   themeConfig: {
     name: 'Grace Design',
-    logo: '/componentlogo.svg',
+    logo: '/grace-design/componentlogo.svg',
     nav: navs,
     sidebar: sidebar,
     footer: 'Copyright © 2023-present Grace',
