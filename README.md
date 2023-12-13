@@ -25,10 +25,6 @@ $ yarn add grace-design
 $ pnpm add grace-design
 ```
 
-## LICENSE
-
-MIT
-
 ## Preview address
 
 https://eimi-fukada.github.io/grace-design/
